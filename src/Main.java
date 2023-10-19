@@ -24,7 +24,9 @@ public class Main {
 			System.out.println("8: Tìm số nguyên tố đầu tiền.");
 			System.out.println("9: Tìm số dương cuối cùng trong mảng.");
 			System.out.println("10: Tìm giá trị chẳn nhỏ nhất trong mảng.");
-			System.out.println("Khác 1 ~ 10: Kết thúc!");
+			System.out.println("11: Xuất thông tin mảng vừa nhập.");
+			System.out.println("12: Nhập lại mảng mới.");
+			System.out.println("Khác 1 ~ 12: Kết thúc!");
 			System.out.print("\nMời nhập chức năng: ");
 			chon = scan.nextInt();
 			
@@ -74,10 +76,19 @@ public class Main {
 					else
 						System.out.println("Không có số chẳn trong mảng.");
 					break;
+				case 11:
+					xuatMang(arr, n);
+					break;
+				case 12: 
+					n = nhapN();
+					arr = new int[n];
+					arr = nhapMang(n);
+					xuatMang(arr, n);
+					break;
 			}
-		} while(chon > 0 && chon < 11);
+		} while(chon > 0 && chon < 13);
 		
-		System.out.println("\n=====End=====");
+		System.out.println("\n=====Kêt thúc=====");
 	}
 	
 	public static int nhapN() {
